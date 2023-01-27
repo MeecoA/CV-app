@@ -58,7 +58,7 @@ const DetailsForm = ({
             <div>
               <label>Photo: </label>
               <input type="file" onChange={HandleFileSelect}></input>
-              {selectedFile && <img src={URL.createObjectURL(selectedFile)} alt="selected image"></img>}
+              {selectedFile && <img src={URL.createObjectURL(selectedFile)} alt="selected"></img>}
             </div>
           </div>
         )}
