@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import AddDetails from "./components/AddDetails";
 import AddEducation from "./components/AddEducation";
