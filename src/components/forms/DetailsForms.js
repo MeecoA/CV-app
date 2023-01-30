@@ -21,7 +21,10 @@ const DetailsForm = ({
         {editable && (
           <div className="inputs-container">
             <br></br>
-            <h1>Personal Information</h1>
+            <div className="section-titles">
+              <iconify-icon icon="material-symbols:person-pin" width="40" height="40"></iconify-icon>
+              <h1>Personal Information</h1>
+            </div>
             <br />
             <form onSubmit={HandleSubmit} className="form-inputs">
               <div>

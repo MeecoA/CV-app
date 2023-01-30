@@ -1,16 +1,5 @@
 import EducationView from "../views/EducationView";
-const EducatioForm = ({
-  editable,
-  HandleSubmit,
-  HandleChange,
-  setEditable,
-  date,
-  school,
-  course,
-  components,
-  HandleDelete,
-  HandleAdd,
-}) => {
+const EducatioForm = ({ editable, HandleSubmit, HandleChange, setEditable, date, school, course }) => {
   return (
     <>
       <div>
@@ -39,15 +28,6 @@ const EducatioForm = ({
                 </button>
               </div>
             </form>
-            <button onClick={HandleAdd} className="add-field">
-              <iconify-icon icon="material-symbols:add-circle-outline" width="40" height="40"></iconify-icon>
-            </button>
-            {components.map((component, index) => (
-              <div key={index}>
-                {component}
-                <button onClick={() => HandleDelete(index)}>Delete</button>
-              </div>
-            ))}
           </div>
         )}
         {!editable && (

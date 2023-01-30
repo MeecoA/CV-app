@@ -27,7 +27,7 @@ header {
   margin-top: 50px;
 }
 .section-titles {
-  width: 300px;
+  width: 500px;
   display: flex;
   align-items: center;
   margin-left: 50px;
@@ -36,7 +36,7 @@ header {
   margin-left: 10px;
 }
 .inputs-container {
-  border-bottom: 1px solid;
+  /* border-bottom: 1px solid; */
   padding: 10px;
 }
 .form-inputs {
@@ -94,7 +94,9 @@ button[type="submit"]:hover {
 }
 .add-field:hover {
   transition: 0.3s;
+  transform: scale(1.2);
   box-shadow: var(--button-box-shadow);
+  color: gray;
 }
 .personal-details {
   padding-top: 20px;
@@ -146,6 +148,16 @@ button[type="submit"]:hover {
   cursor: pointer;
   background-color: white;
 }
+.btn-delete {
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+.btn-delete:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+  color: red;
+}
 
 .btn-edit:active,
 .btn-edit:hover {
@@ -173,4 +185,16 @@ button[type="submit"]:hover {
 .school-company {
   font-size: 20px;
   font-weight: bolder;
+}
+footer {
+  text-align: center;
+  width: 100%;
+  background-color: purple;
+  font: var(--font);
+}
+.footer-text {
+  font-family: var(--font);
+  color: white;
+  font-size: large;
+  padding: 20px;
 }

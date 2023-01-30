@@ -1,4 +1,5 @@
 import JobExpView from "../views/JobExpView";
+
 const JobExpForm = ({
   editable,
   HandleSubmit,
@@ -39,15 +40,12 @@ const JobExpForm = ({
                 </button>
               </div>
             </form>
-            <button onClick={HandleAdd} className="add-field">
-              <iconify-icon icon="material-symbols:add-circle-outline" width="40" height="40"></iconify-icon>
-            </button>
-            {components.map((component, index) => (
+            {/* {components.map((component, index) => (
               <div key={index}>
                 {component}
                 <button onClick={() => HandleDelete(index)}>Delete</button>
               </div>
-            ))}
+            ))} */}
           </div>
         )}
         {!editable && (
