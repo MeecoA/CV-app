@@ -6,15 +6,22 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h2> CV Maker App</h2>
+        <h2> CV Maker App | by MeecoA</h2>
       </header>
       <div className="content">
-        <br />
         <AddDetails />
         <br />
-        <h1>Education</h1>
+        <div className="section-titles">
+          <iconify-icon icon="mdi:education-outline" width="40" height="40"></iconify-icon>
+          <h1>Education</h1>
+        </div>
+
         <AddEducation />
-        <h1>Job Experience</h1>
+        <br />
+        <div className="section-titles">
+          <iconify-icon icon="ph:briefcase-bold" width="40" height="40"></iconify-icon>
+          <h1>Job Experience</h1>
+        </div>
         <AddJobExp />
       </div>
     </div>

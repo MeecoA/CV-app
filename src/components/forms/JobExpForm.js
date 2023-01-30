@@ -15,29 +15,39 @@ const JobExpForm = ({
     <>
       <div>
         {editable && (
-          <div>
-            <form onSubmit={HandleSubmit}>
+          <div className="inputs-container">
+            <form onSubmit={HandleSubmit} className="form-inputs">
               <div>
-                <label>Date</label>
+                <label>Year</label>
+                <br />
                 <input type="text" name="date" value={date} onChange={HandleChange}></input>
               </div>
               <div>
                 <label>Company</label>
+                <br />
                 <input type="text" name="company" value={company} onChange={HandleChange}></input>
               </div>
               <div>
                 <label>Description</label>
+                <br />
                 <input type="text" name="description" value={description} onChange={HandleChange}></input>
               </div>
-              <button type="submit">Submit</button>
+              <div className="submit-educ">
+                <br></br>
+                <button type="submit">
+                  <iconify-icon icon="material-symbols:done" width="40" height="40"></iconify-icon>
+                </button>
+              </div>
             </form>
+            <button onClick={HandleAdd} className="add-field">
+              <iconify-icon icon="material-symbols:add-circle-outline" width="40" height="40"></iconify-icon>
+            </button>
             {components.map((component, index) => (
               <div key={index}>
                 {component}
                 <button onClick={() => HandleDelete(index)}>Delete</button>
               </div>
             ))}
-            <button onClick={HandleAdd}>Add Component</button>
           </div>
         )}
         {!editable && (

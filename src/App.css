@@ -8,8 +8,8 @@
   --main-color: purple;
   --font: "Almarai", sans-serif;
   --font-color: white;
-  --buton-radius: 5px;
-  --buton-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  --button-radius: 5px;
+  --button-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   --button-bg-color: lightgreen;
 }
 header {
@@ -26,8 +26,14 @@ header {
   margin: auto;
   margin-top: 50px;
 }
-h1 {
-  text-align: center;
+.section-titles {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+.section-titles > h1 {
+  margin-left: 10px;
 }
 .inputs-container {
   border-bottom: 1px solid;
@@ -40,6 +46,7 @@ h1 {
   gap: 20px;
   grid-template-columns: 1fr 1fr;
 }
+
 input[type="text"] {
   height: 30px;
   font: var(--font);
@@ -51,21 +58,119 @@ textarea {
   width: 250px;
   padding: 5px;
 }
+.img-holder {
+  display: flex;
+  justify-content: center;
+}
 .cv-photo {
   width: 200px;
   height: 200px;
-  border-radius: 120px;
+  border-radius: 50%;
+  border: 5px solid white;
 }
 button[type="submit"] {
   border: none;
   width: 250px;
+  height: 50px;
   font: var(--font);
   font-weight: bold;
   background-color: var(--button-bg-color);
   cursor: pointer;
-  border-radius: var(--buton-radius);
+  border-radius: var(--button-radius);
 }
 button[type="submit"]:hover {
   transition: 0.3s;
-  box-shadow: var(--buton-box-shadow);
+  box-shadow: var(--button-box-shadow);
+}
+.add-field {
+  border: none;
+  width: 40px;
+  height: 40px;
+  font: var(--font);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: var(--button-radius);
+  border-radius: 50%;
+}
+.add-field:hover {
+  transition: 0.3s;
+  box-shadow: var(--button-box-shadow);
+}
+.personal-details {
+  padding-top: 20px;
+}
+.view-container {
+  height: 200px;
+  background-color: darkslateblue;
+  color: white;
+}
+.view-details {
+  padding-top: 20px;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+.contact-details {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.contact-details > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+}
+.contact-details > div:nth-child(3) {
+  width: 175px;
+}
+.view-fullname {
+  font-size: 50px;
+  font-weight: bolder;
+}
+.view-title {
+  font-size: 30px;
+}
+.contact-details {
+  color: black;
+  font-weight: bold;
+}
+.edit-container {
+  width: fit-content;
+  margin-left: 10px;
+}
+.btn-edit {
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+.btn-edit:active,
+.btn-edit:hover {
+  color: gray;
+}
+
+.educ-job-info {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 60%;
+  margin: auto;
+}
+.course-description {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.date {
+  font-size: 15px;
+  font-weight: bolder;
+  font-style: italic;
+  color: purple;
+}
+.school-company {
+  font-size: 20px;
+  font-weight: bolder;
 }

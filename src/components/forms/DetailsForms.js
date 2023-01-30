@@ -20,6 +20,7 @@ const DetailsForm = ({
       <div>
         {editable && (
           <div className="inputs-container">
+            <br></br>
             <h1>Personal Information</h1>
             <br />
             <form onSubmit={HandleSubmit} className="form-inputs">
