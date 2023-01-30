@@ -6,15 +6,17 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1> CV Maker App</h1>
+        <h2> CV Maker App</h2>
       </header>
-      <h1>Personal Information</h1>
-      <AddDetails />
-      <br />
-      <h1>Education</h1>
-      <AddEducation />
-      <h1>Job Experience</h1>
-      <AddJobExp />
+      <div className="content">
+        <br />
+        <AddDetails />
+        <br />
+        <h1>Education</h1>
+        <AddEducation />
+        <h1>Job Experience</h1>
+        <AddJobExp />
+      </div>
     </div>
   );
 }
